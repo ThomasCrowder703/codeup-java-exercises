@@ -6,7 +6,10 @@ public class HelloWorld {
 //        int myFavoriteNumber = 27;
 //        System.out.println(myFavoriteNumber);
 
-        String myString = "Thomas";
-        System.out.println(myString);
+//        String myString = "Thomas";
+//        System.out.println(myString);
+
+//        float myNumber = 3.14F;
+//        System.out.println(myNumber);
     }
 }
