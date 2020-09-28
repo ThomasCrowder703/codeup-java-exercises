@@ -45,6 +45,7 @@ public class HelloWorld {
 //        System.out.println(y);
 
         byte biggestNumber = 127;
+        System.out.println(biggestNumber+2);
         System.out.println(biggestNumber);
     }
 }
