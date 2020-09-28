@@ -36,12 +36,15 @@ public class HelloWorld {
 //        y*= x;
 //        System.out.println(y);
 
-        int x = 10;
-        int y = 2;
+//        int x = 10;
+//        int y = 2;
+//
+//        x/= y;
+//        System.out.println(x);
+//        y-=x;
+//        System.out.println(y);
 
-        x/= y;
-        System.out.println(x);
-        y-=x;
-        System.out.println(y);
+        byte biggestNumber = 127;
+        System.out.println(biggestNumber);
     }
 }
