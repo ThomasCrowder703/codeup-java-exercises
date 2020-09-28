@@ -2,7 +2,11 @@ public class HelloWorld {
     public static  void main(String[] args){
 //        System.out.print("Hello, ");
 //        System.out.print("World");
-        int myFavoriteNumber = 27;
-        System.out.println(myFavoriteNumber);
+
+//        int myFavoriteNumber = 27;
+//        System.out.println(myFavoriteNumber);
+
+        String myString = "Thomas";
+        System.out.println(myString);
     }
 }
