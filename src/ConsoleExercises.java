@@ -18,8 +18,17 @@ public class ConsoleExercises {
 //        String thirdWord = sc.next();
 //        System.out.printf("Your words are: \n %s \n %s \n %s", firstWord, secondWord, thirdWord);
 
-        System.out.println("Please enter a sentence");
-        String userSentence =  sc.nextLine();
-        System.out.printf("%s", userSentence);
+//        System.out.println("Please enter a sentence");
+//        String userSentence =  sc.nextLine();
+//        System.out.printf("%s", userSentence);
+
+
+        System.out.println("Please enter the length and width of the codeup classroom");
+        String length = sc.next();
+        String width = sc.next();
+        int perimeter = (Integer.parseInt(length)*2) + (Integer.parseInt(width)*2);
+        System.out.printf("The perimeter of the classroom is %d", perimeter);
+
     }
+
 }
