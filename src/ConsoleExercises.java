@@ -12,10 +12,14 @@ public class ConsoleExercises {
 //        int userInt = sc.nextInt();
 //        System.out.printf("Your number is %d", userInt);
 
-        System.out.println("Please enter three words");
-        String firstWord = sc.next();
-        String secondWord = sc.next();
-        String thirdWord = sc.next();
-        System.out.printf("Your words are: \n %s \n %s \n %s", firstWord, secondWord, thirdWord);
+//        System.out.println("Please enter three words");
+//        String firstWord = sc.next();
+//        String secondWord = sc.next();
+//        String thirdWord = sc.next();
+//        System.out.printf("Your words are: \n %s \n %s \n %s", firstWord, secondWord, thirdWord);
+
+        System.out.println("Please enter a sentence");
+        String userSentence =  sc.nextLine();
+        System.out.printf("%s", userSentence);
     }
 }
