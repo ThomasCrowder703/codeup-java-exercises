@@ -41,30 +41,59 @@ public class ControlFlowExercises {
 //            }
 //        }
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Please enter an integer.");
-        int userInteger = sc.nextInt();
-        System.out.println("Would you like to continue?[y/N]");
-        Scanner scan = new Scanner(System.in);
-        String userInput = scan.next();
-        boolean confirmation = userInput.equals("y");
-        if(confirmation){
-            System.out.println("Here is your table: ");
-            System.out.println(" ");
-            System.out.println("number | squared | cubed");
-            System.out.println("------ | ------- | -----");
-            for(int i = 1; i <= userInteger; i++){
-                int squared = (int) Math.pow(i,2);
-                int cubed = (int) Math.pow(i,3);
-                if(i < 4){
-                    System.out.println(i + "      |" + squared + "        |" + cubed);
-                } else {
-                    System.out.println(i + "      |" + squared + "       |" + cubed);
-                }
-
-            }
-        }
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Please enter an integer.");
+//        int userInteger = sc.nextInt();
+//        System.out.println("Would you like to continue?[y/N]");
+//        Scanner scan = new Scanner(System.in);
+//        String userInput = scan.next();
+//        boolean confirmation = userInput.equals("y");
+//        if(confirmation){
+//            System.out.println("Here is your table: ");
+//            System.out.println(" ");
+//            System.out.println("number | squared | cubed");
+//            System.out.println("------ | ------- | -----");
+//            for(int i = 1; i <= userInteger; i++){
+//                int squared = (int) Math.pow(i,2);
+//                int cubed = (int) Math.pow(i,3);
+//                if(i < 4){
+//                    System.out.println(i + "      |" + squared + "        |" + cubed);
+//                } else {
+//                    System.out.println(i + "      |" + squared + "       |" + cubed);
+//                }
 //
+//            }
+//        }
+// Walkthrough method below
+//        Scanner scanner = new Scanner(System.in);
+//
+//        boolean userContinues = true;
+//
+//        do {
+//            System.out.println("What number would you like to go up to?");
+//            int userInt = scanner.nextInt();
+//            System.out.println("Here is your table.");
+//            System.out.println("");
+//            System.out.println("number | squared | cubed");
+//            System.out.println("------ | ------- | -----");
+//            for (int i = 1; i <= userInt; i++){
+//                System.out.printf("%-6d", i);
+//                System.out.printf(" | ");
+//                System.out.printf("%-7d", i * i); //%7d adds padding to the columns
+//                System.out.printf(" | ");
+//                System.out.print(i*i*i);
+//                System.out.println();
+//            }
+//
+//            System.out.println("Would youlike to enter another number [y/N]?");
+//            String userResponse = scanner.next();
+//            if(!userResponse.equalsIgnoreCase("y")){
+//                userContinues = false;
+//            }
+//
+//        }while(userContinues);
+
+
 
 //        System.out.println("Please enter your grade (1 - 100):");
 //        Scanner scan = new Scanner(System.in);
