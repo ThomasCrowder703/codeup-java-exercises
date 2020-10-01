@@ -41,27 +41,40 @@ public class ControlFlowExercises {
 //            }
 //        }
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Please enter an integer.");
-        int userInteger = sc.nextInt();
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Please enter an integer.");
+//        int userInteger = sc.nextInt();
+//
+//
+//        System.out.println("Here is your table: ");
+//        System.out.println(" ");
+//        System.out.println("number | squared | cubed");
+//        System.out.println("------ | ------- | -----");
+//        for(int i = 1; i <= userInteger; i++){
+//            int squared = (int) Math.pow(i,2);
+//            int cubed = (int) Math.pow(i,3);
+//            if(i < 4){
+//                System.out.println(i + "      |" + squared + "        |" + cubed);
+//            } else {
+//                System.out.println(i + "      |" + squared + "       |" + cubed);
+//            }
+//
+//        }
 
-
-        System.out.println("Here is your table: ");
-        System.out.println(" ");
-        System.out.println("number | squared | cubed");
-        System.out.println("------ | ------- | -----");
-        for(int i = 1; i <= userInteger; i++){
-            int squared = (int) Math.pow(i,2);
-            int cubed = (int) Math.pow(i,3);
-            if(i < 4){
-                System.out.println(i + "      |" + squared + "        |" + cubed);
-            } else {
-                System.out.println(i + "      |" + squared + "       |" + cubed);
-            }
-
+        System.out.println("Please enter your grade (1 - 100):");
+        Scanner scan = new Scanner(System.in);
+        int userGrade = scan.nextInt();
+        if(userGrade >= 88){
+            System.out.println("You earned an A!");
+        }else if(userGrade >= 80){
+            System.out.println("You made a B!");
+        }else if(userGrade >= 67){
+            System.out.println("You got a C. Study up!");
+        }else if(userGrade >= 60){
+            System.out.println("Your grade was a D. You're in danger!");
+        }else{
+            System.out.println("You failed!");
         }
-
-
 
     }
 }
