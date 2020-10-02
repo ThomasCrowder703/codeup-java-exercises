@@ -85,7 +85,7 @@ public class ControlFlowExercises {
 //                System.out.println();
 //            }
 //
-//            System.out.println("Would youlike to enter another number [y/N]?");
+//            System.out.println("Would you like to enter another number [y/N]?");
 //            String userResponse = scanner.next();
 //            if(!userResponse.equalsIgnoreCase("y")){
 //                userContinues = false;
