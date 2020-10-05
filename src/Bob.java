@@ -6,6 +6,8 @@ public class Bob {
         Scanner sc = new Scanner(System.in);
         String userContinue = sc.nextLine();
 
+
+
       if (userContinue.equalsIgnoreCase("y")){
           System.out.println("Say something to Bob.");
           for(int i =1; i >= 1; i++){
@@ -23,5 +25,23 @@ public class Bob {
           }
       }
 
+
+        //walkthrough method
+
+//        Scanner scan = new Scanner(System.in);
+//        System.out.println("What will you say to bob?");
+//        String input = scan.nextLine().trim();
+//
+//        if(input.endsWith("?")){
+//            System.out.println("Sure.");
+//        } else if (input.endsWith("!")){
+//            System.out.println("Woah, chill out!");
+//        } else if (input.equals("")){
+//            System.out.println("Fine, be that way!");
+//        }else{
+//            System.out.println("Whatever.");
+//        }
+
+//        "Thomas".lastIndexOf("T");
     }
 }
