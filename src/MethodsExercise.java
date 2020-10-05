@@ -84,5 +84,26 @@ public class MethodsExercise {
 //           return diceNumbers;  //Return to this problem
 //        }
 
+    //walkthrough of dice problem
+
+    public static void randomize(short sides){
+        System.out.println( (int) Math.floor(Math.random() * sides + 1));
+        System.out.println( (int) Math.floor(Math.random() * sides + 1));
+    }
+
+    public static void rollDice(){
+        Scanner scan = new Scanner(System.in);
+        while (true){
+            System.out.println("Roll Dice Method");
+            System.out.println("Number of sides: ");
+            short sides = Short.parseShort(scan.nextLine());
+            randomize(sides);
+            System.out.println("Do you eant to continue? [y/N]");
+            if(scan.nextLine().equalsIgnoreCase("n")){
+                break;
+            }
+        }
+    }
+
 }
 
