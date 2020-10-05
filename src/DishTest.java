@@ -5,5 +5,8 @@ public class DishTest {
         dish1.nameOfDish =  "Mushroom Soup";
         dish1.wouldRecommend = false;
         dish1.printSummary();
+
+
+
     }
 }

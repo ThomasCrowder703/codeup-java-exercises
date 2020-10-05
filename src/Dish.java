@@ -4,13 +4,13 @@ public class Dish {
     public String nameOfDish;
     public Boolean wouldRecommend;
 
-    public static void main(String[] args) {
-        Dish spaghetti = new Dish();
-        spaghetti.costInCents = 100;
-        spaghetti.nameOfDish = "Spaghetti";
-        spaghetti.wouldRecommend = true;
-        spaghetti.printSummary();
-    }
+//    public static void main(String[] args) {
+//        Dish spaghetti = new Dish();
+//        spaghetti.costInCents = 100;
+//        spaghetti.nameOfDish = "Spaghetti";
+//        spaghetti.wouldRecommend = true;
+//        spaghetti.printSummary();
+//    }
 
 
     public void printSummary(){
