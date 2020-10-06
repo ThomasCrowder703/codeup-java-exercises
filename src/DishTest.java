@@ -4,8 +4,11 @@ public class DishTest {
         dish1.costInCents = 30;
         dish1.nameOfDish =  "Mushroom Soup";
         dish1.wouldRecommend = false;
-        dish1.printSummary();
+//        dish1.printSummary();
 
+        DishTools.shoutDishName(dish1);
+        DishTools.analyzeDishCount(dish1);
+        DishTools.flipRecommendation(dish1);
 
 
     }

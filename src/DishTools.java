@@ -3,6 +3,7 @@ public class DishTools {
 
 
     public static void shoutDishName(Dish d){
+
         System.out.println(d.nameOfDish.toUpperCase());
     }
 
@@ -13,5 +14,6 @@ public class DishTools {
 
     public static void flipRecommendation(Dish d){
         d.wouldRecommend = !d.wouldRecommend;
+        System.out.println(d.wouldRecommend);
     }
 }
