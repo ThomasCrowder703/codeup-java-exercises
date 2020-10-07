@@ -19,16 +19,19 @@ public class ArraysExercises {
             System.out.println("individual = " + individual.getName()); //I had to use .getName because each person is an object not a string
 
         }
-        addPerson(persons, "Rex");
-//        addPerson(persons, "Terry"); //Ask about adding more than one person
+//        System.out.println(Arrays.toString(addPerson(persons, new Person("Rex"))));
+
+        addPerson(persons, new Person("Rex"));
+
     }
 
-    public static Person[] addPerson(Person[] arg, String newName){
+    public static Person[] addPerson(Person[] arg, Person newName){
         Person[] copyOfPerson = Arrays.copyOf(arg, arg.length + 1);
-        copyOfPerson [3] = new Person(newName);
+        copyOfPerson [copyOfPerson.length - 1] = newName;
         for(int i =0; i< copyOfPerson.length; i++){
             System.out.println(copyOfPerson[i].getName());
         }
+
 
         return copyOfPerson;
     }
