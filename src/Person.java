@@ -21,10 +21,12 @@ public class Person { //class declaration
     }
 
     public static void main(String[] args) { //main method declaration
-        Person p1 = new Person("Bob"); //new Person being created
+        Person p1 = new Person("Bob");//new Person being created
+        p1.sayHello();
+        System.out.println(p1.getName());
         p1.setName("Thomas"); // overrides the constructor and sets name to Thomas. Changes name without creating a new person
         p1.sayHello(); //invoke sayHello function with p1 value
-
+        System.out.println(p1.getName());
 //        Person person1 = new Person("John");
 //        Person person2 = new Person("John");
 //        System.out.println(person1.getName().equals(person2.getName()));
