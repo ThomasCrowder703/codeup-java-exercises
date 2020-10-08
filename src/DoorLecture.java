@@ -1,6 +1,6 @@
 public class DoorLecture {
     private boolean open;
-    private String description;
+    protected String description;
 
     public DoorLecture(String description){
         this.description = description;
