@@ -10,12 +10,11 @@ public class ArraysExercises {
         Person[] persons = new Person[3];
 
 
-
         persons[0] = new Person("Phil");
         persons[1] = new Person("Darrel");
         persons[2] = new Person("Vinnie");
 
-        for (Person individual:persons) {
+        for (Person individual : persons) {
             System.out.println("individual = " + individual.getName()); //I had to use .getName because each person is an object not a string
 
         }
@@ -25,10 +24,10 @@ public class ArraysExercises {
 
     }
 
-    public static Person[] addPerson(Person[] arg, Person newName){
+    public static Person[] addPerson(Person[] arg, Person newName) {
         Person[] copyOfPerson = Arrays.copyOf(arg, arg.length + 1);
-        copyOfPerson [copyOfPerson.length - 1] = newName;
-        for(int i =0; i< copyOfPerson.length; i++){
+        copyOfPerson[copyOfPerson.length - 1] = newName;
+        for (int i = 0; i < copyOfPerson.length; i++) {
             System.out.println(copyOfPerson[i].getName());
         }
 
@@ -36,3 +35,39 @@ public class ArraysExercises {
         return copyOfPerson;
     }
 }
+
+//walkthrough solution
+//    public class ArraysExercises{
+//        public static void main(String[] args) {
+//
+////            Person onePerson = new Person("Fer");
+////            Person secondPerson = new Person("Ana"); refactored to write less code below
+////            Person thirdPerson = new Person("Betty");
+//
+//            Person[] people = new Person[3];
+//            people[0] = new Person("Fer");
+//            people[1] = new Person("Ana");
+//            people[2] = new Person("Betty"); //assigned values to the array
+//
+//            for (Person aPerson : people) {
+//                System.out.println(aPerson.getName()); //looped through the array and printed names
+//            }
+//
+//            Person[] newArray = addPerson(people, new Person("Robert"));
+//
+//            for (Person aPerson: newArray) {
+//                System.out.println(aPerson.getName());
+//            }
+//
+//        }
+//
+//        public static Person[] addPerson(Person[] tempArray, Person personToAdd){
+//            tempArray = Arrays.copyOf(tempArray, tempArray.length +1);
+//            tempArray(tempArray.length -1) = personToAdd;
+//            return tempArray;
+//        }
+//    }
+
+
+
+

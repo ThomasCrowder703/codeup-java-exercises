@@ -1,10 +1,15 @@
-public class ServerNameGenerator {
+import org.w3c.dom.ls.LSOutput;
 
+import java.util.Random;
+
+public class ServerNameGenerator {
+    public static String[] adjectives = {"Green", "Blue", "Red", "Tall", "Wide", "Whimsical", "Disturbed", "Funny", "Boisterous", "Silly"};
+   public static String[] nouns = {"Automobile", "Shoe", "Boat", "Dog", "Corn", "Debt Collector", "Rockstar", "Nebula", "Manager", "Kansas"};
 
     public static void main(String[] args) {
-        String[] adjectives = {"Green", "Blue", "Red", "Tall", "Wide", "Whimsical", "Disturbed", "Funny", "Boisterous", "Silly"};
-        String[] nouns = {"Automobile", "Shoe", "Boat", "Dog", "Corn", "Debt Collector", "Rockstar", "Nebula", "Manager", "Kansas"};
+
         randomElement(adjectives, nouns);
+//        System.out.println(getName(adjectives) + " " + getName(nouns)); walkthrough call
 
     }
 
@@ -18,6 +23,16 @@ public class ServerNameGenerator {
         System.out.println(newCombo);
         return newCombo;
     }
+
+    //walkthrough solution below
+
+//    public static String getName(String[] words){
+//        Random rnd = new Random();
+//        int randomIndex = rnd.nextInt(words.length);
+//        return words[randomIndex];
+//    }
+
+
 }
 
 
