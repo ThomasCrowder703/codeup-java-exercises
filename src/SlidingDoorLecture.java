@@ -1,4 +1,4 @@
-public class SlidingDoorLecture extends DoorLecture {
+public final class SlidingDoorLecture extends DoorLecture {
     public SlidingDoorLecture(String description){
         super(description);
     }
