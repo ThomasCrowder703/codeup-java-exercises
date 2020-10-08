@@ -12,17 +12,26 @@ public class DoorTestLecture {
 //        backGlassSlidingDoor.open();
 //        System.out.println("backGlassSlidingDoor.isOpen() = " + backGlassSlidingDoor.isOpen());
 
-        LockingDoorLecture backDoor = new LockingDoorLecture("back");
-        backDoor.open();
-        System.out.println("backDoor.isOpen() = " + backDoor.isOpen());
-        System.out.println("backDoor.isLocked() = " + backDoor.isLocked());
-        backDoor.unlock();
-        backDoor.unlock(); //this will show the message stating the door is already unlocked
-        backDoor.open();
-        backDoor.lock();
-        backDoor.open();
-        backDoor.close();
-        System.out.println("backDoor.isOpen() = " + backDoor.isOpen());
-        System.out.println("backDoor.isLocked() = " + backDoor.isLocked());
+//        LockingDoorLecture backDoor = new LockingDoorLecture("back");
+//        backDoor.open();
+//        System.out.println("backDoor.isOpen() = " + backDoor.isOpen());
+//        System.out.println("backDoor.isLocked() = " + backDoor.isLocked());
+//        backDoor.unlock();
+//        backDoor.unlock(); //this will show the message stating the door is already unlocked
+//        backDoor.open();
+//        backDoor.lock();
+//        backDoor.open();
+//        backDoor.close();
+//        System.out.println("backDoor.isOpen() = " + backDoor.isOpen());
+//        System.out.println("backDoor.isLocked() = " + backDoor.isLocked());
+        DoorLecture[] doors = new DoorLecture[3];
+        doors[0] = new LockingDoorLecture("Front");
+        doors[1] = new LockingDoorLecture("Back");
+        doors[2] = new SlidingDoorLecture("Front glass");
+
+        for(DoorLecture door: doors){
+            door.open();
+        }
+
     }
 }
