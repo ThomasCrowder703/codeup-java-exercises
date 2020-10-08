@@ -18,17 +18,11 @@ public class Movie {
         return this.category;
     }
 
-    public String changeName(){
-        Scanner scan = new Scanner(System.in);
-        String userInput = scan.nextLine();
-        System.out.println("What is the name of your movie?");
-        return userInput;
+    public void changeName(String aName){
+        this.name = aName;
     }
 
-    public String changeCategory(){
-        Scanner scan = new Scanner(System.in);
-        String userInput = scan.nextLine();
-        System.out.println("What is the category of your movie?");
-        return userInput;
+    public void changeCategory(String aCategory){
+        this.name = aCategory;
     }
 }

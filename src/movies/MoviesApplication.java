@@ -18,13 +18,30 @@ public class MoviesApplication {
 
         Input input = new Input();
 
+        int userNumber = input.getInt();
 
-        if(input.getInt() == 1){
+        if(userNumber == 1){
             for (Movie movie:MoviesArray.findAll() ) {
                 System.out.println(movie.getMovieName() + " -- " + movie.getMovieCategory());
             }
+        }else if(userNumber == 2){
+           printMoviesByCategory("animated");
+        }else if(userNumber == 3){
+           printMoviesByCategory("drama");
+        } else if(userNumber == 4){
+            printMoviesByCategory("horror");
+        } else if(userNumber == 5){
+           printMoviesByCategory("scifi");
+        } else {
+            System.exit(0);
         }
+    }
 
-
+    public static void printMoviesByCategory(String category){
+        for(Movie movie: MoviesArray.findAll()){
+            if(movie.getMovieCategory().equalsIgnoreCase(category)){
+                System.out.println(movie.getMovieName() + " -- " + movie.getMovieCategory());
+            }
+        }
     }
 }
