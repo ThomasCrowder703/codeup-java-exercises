@@ -13,6 +13,10 @@ abstract class Employee {
     }
 
     public abstract String work();
+
+    public void sayHello(){
+        System.out.printf("Hello my name is %s I work in %s", this.name, this.department);
+    }
 }
 
 
