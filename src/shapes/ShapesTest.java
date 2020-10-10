@@ -11,15 +11,32 @@ public class ShapesTest {
 //        System.out.println(box2.getArea());
 //        System.out.println(box2.getPerimeter());
 //
-        Rectangle[] rectangles = new Rectangle[2];
+        Measurable[] rectangles = new Measurable[2]; //this is allowed because it is an array of instances, NOT a measurable instance.
         rectangles[0] = new Rectangle(5, 4);
         rectangles[1] = new Square(5); // Why is it not overriding to the Square Methods A: The Square Methods did not need the parameter I was providing.
 
 
-        for (Rectangle rectangle: rectangles) {
-            System.out.println(rectangle.getArea());
-            System.out.println(rectangle.getPerimeter());
+        for (Measurable rectangle: rectangles) { //I dont need to System.out.print because my methods already do that
+            rectangle.getArea();
+            rectangle.getPerimeter();
+
         }
+
+        System.out.println("Testing Setters below: ");
+
+        Quadrilateral setterSquare = new Square(5);
+
+        setterSquare.getArea();
+
+        setterSquare.setLength(6); //using setter to change square values
+        setterSquare.getArea(); //I am predicting that the output will be 36.
+       // Conclusion: setters may be used to set a value AFTER creation. Is this the purpose of making them abstract? A:
+
+
+
+
+
+
 
     }
 }
