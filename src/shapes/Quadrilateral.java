@@ -18,7 +18,7 @@ public abstract class Quadrilateral extends Shape implements Measurable{
    }
 
    //Why are these void?A: I'm not returning/retrieving information, I am setting data. Therefor, no return value
-   public abstract void setLength(double aLength); //why does this need a parameter A:
+   public abstract void setLength(double aLength); //why does this need a parameter A: You are passing in the value you want to set to the instance.
    public abstract void setWidth(double aWidth);
    }
 

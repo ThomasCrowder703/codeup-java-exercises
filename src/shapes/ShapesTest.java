@@ -19,7 +19,20 @@ public class ShapesTest {
         for (Measurable rectangle: rectangles) { //I dont need to System.out.print because my methods already do that
             rectangle.getArea();
             rectangle.getPerimeter();
+
         }
+
+        System.out.println("Testing Setters below: ");
+
+        Quadrilateral setterSquare = new Square(5);
+
+        setterSquare.getArea();
+
+        setterSquare.setLength(6); //using setter to change square values
+        setterSquare.getArea(); //I am predicting that the output will be 36.
+       // Conclusion: setters may be used to set a value AFTER creation. Is this the purpose of making them abstract? A:
+
+
 
 
 
