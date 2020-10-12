@@ -3,8 +3,8 @@ package extra;
 public abstract class MusicalInstrument implements Playable {
     private String instrumentClassification;
 
-    MusicalInstrument(String classify){
-      
+   public MusicalInstrument(String classify){
+     this.instrumentClassification = classify;
     }
 
     public String getInstrumentClassification(){
