@@ -13,9 +13,9 @@ public class Sax extends MusicalInstrument implements Tunable, VolumeAdjustable{
         return this.saxType;
     }
 
-//    public void setSaxType(){
-//
-//    }
+    public void setSaxType(String newType){
+        this.saxType = newType;
+    }
 
 
     @Override

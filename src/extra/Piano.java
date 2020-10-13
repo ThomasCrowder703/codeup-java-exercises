@@ -13,6 +13,10 @@ public class Piano extends MusicalInstrument implements Tunable, VolumeAdjustabl
         return this.numberOfKeys;
     }
 
+    public void setNumberOfKeys(int newNumber){
+        this.numberOfKeys = newNumber;
+    }
+
     @Override
     public void setInstrumentClassification(String classify){
 
