@@ -28,6 +28,8 @@ public class Student {
     public String getName(){
         return this.name;
     }
+
+
     // adds the given grade to the grades property
     public void addGrade(int grade){
         grades.add(grade);
