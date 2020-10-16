@@ -14,73 +14,34 @@ public class FilesLecture {
         String directoryName = "data";
         String fileName = "grocery_List.txt";
 
-        Path directoryPath = Paths.get(directoryName);
-        Path dataFilePath = Paths.get(directoryName, fileName);
-
-
         //We have to create a directory first before we create the file.
 
         try {
-            if (Files.notExists(directoryPath)) {
-                Files.createDirectories(directoryPath);
-            }
-
-            if (!Files.exists(dataFilePath)) {
-                Files.createFile(dataFilePath);
-            }
+           Path dataFilePath = FileIO.createDirectoryAndFile(directoryName, fileName);
 
             //Write our grocery list to the file.
             List<String> groceryList = Arrays.asList("milk", "eggs","bacon");
             Files.write(dataFilePath,groceryList);
 
-            List<String> fileContents = Files.readAllLines(dataFilePath);
-            for (int i = 0; i < fileContents.size() ; i++) {
-                System.out.printf("%d: %s\n", (i + 1),fileContents.get(i));
-            }
+           FileIO.printFileContents(dataFilePath);
 
             //Append to the file.
             Files.write(dataFilePath, Arrays.asList("cereal", "bread"), StandardOpenOption.APPEND);
-            fileContents = Files.readAllLines(dataFilePath);
-            System.out.println();
-            for (int i = 0; i < fileContents.size() ; i++) {
-                System.out.printf("%d: %s\n", (i + 1),fileContents.get(i));
-            }
+            FileIO.printFileContents(dataFilePath);
 
             //Replace a line in the file.
-            fileContents = Files.readAllLines(dataFilePath);
-            List<String> modifiedList = new ArrayList<>();
-            for(String item: fileContents){
-                if(item.equals("milk")){
-                    //Add my modified item.
-                    modifiedList.add("whole milk");
-                }else{
-                    //Add the existing item because it itn't what we want to replace.
-                    modifiedList.add(item);
-                }
-            }
-            Files.write(dataFilePath, modifiedList);
-            fileContents = Files.readAllLines(dataFilePath);
-            System.out.println();
-            for (int i = 0; i < fileContents.size() ; i++) {
-                System.out.printf("%d: %s\n", (i + 1),fileContents.get(i));
-            }
+
+            FileIO.updateLine(dataFilePath, "milk", "whole milk");
+            FileIO.printFileContents(dataFilePath);
 
             //Remove a line from a file.
-            fileContents = Files.readAllLines(dataFilePath);
-            System.out.println();
-            modifiedList = new ArrayList<>();
-            for(String item: fileContents){
-                //I want to remove the bread from the list.
-                if(!item.equals("bread")){
-                    modifiedList.add(item);
-                }
-            }
-            Files.write(dataFilePath, modifiedList);
-            fileContents = Files.readAllLines(dataFilePath);
-            System.out.println();
-            for (int i = 0; i < fileContents.size() ; i++) {
-                System.out.printf("%d: %s\n", (i + 1),fileContents.get(i));
-            }
+            FileIO.deleteLine(dataFilePath, "bread");
+            FileIO.printFileContents(dataFilePath);
+
+            //Empty the list
+            Files.write(dataFilePath, new ArrayList<>());
+            System.out.println("After empty");
+            FileIO.printFileContents(dataFilePath);
         } catch (IOException ex) {
             System.out.println("Cannot create the file.");
             ex.printStackTrace();
