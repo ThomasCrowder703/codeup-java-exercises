@@ -11,8 +11,8 @@ import java.util.List;
 
 public class FilesLecture {
     public static void main(String[] args)  {
-        String directoryName = "data";
-        String fileName = "grocery_List.txt";
+        String directoryName = "data"; // defining string
+        String fileName = "grocery_List.txt";// defining string
 
         //We have to create a directory first before we create the file.
 
@@ -20,10 +20,10 @@ public class FilesLecture {
            Path dataFilePath = FileIO.createDirectoryAndFile(directoryName, fileName);
 
             //Write our grocery list to the file.
-            List<String> groceryList = Arrays.asList("milk", "eggs","bacon");
-            Files.write(dataFilePath,groceryList);
+            List<String> groceryList = Arrays.asList("milk", "eggs","bacon"); //creating list
+            Files.write(dataFilePath,groceryList);//pushing list to file
 
-           FileIO.printFileContents(dataFilePath);
+           FileIO.printFileContents(dataFilePath);//writing list in command line
 
             //Append to the file.
             Files.write(dataFilePath, Arrays.asList("cereal", "bread"), StandardOpenOption.APPEND);
